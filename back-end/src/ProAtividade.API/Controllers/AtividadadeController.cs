@@ -10,10 +10,10 @@ namespace ProAtividade.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class AtividadadeController : ControllerBase
+    public class AtividadeController : ControllerBase
     {
         private readonly DataContext _context;
-        public AtividadadeController(DataContext context)
+        public AtividadeController(DataContext context)
         {
             _context = context;
         }
@@ -31,13 +31,13 @@ namespace ProAtividade.API.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<Atividade> Post(Atividade atividade)
+        public Atividade Post(Atividade atividade)
         {
             _context.Atividades.Add(atividade);
             if (_context.SaveChanges() > 0)
-                return _context.Atividades;
+                return atividade;
             else
-                throw new Exception("Você não consguiu adicionar uma atividade");
+                throw new Exception("Você não conseguiu adicionar uma atividade");
         }
 
         [HttpPut("{id}")]

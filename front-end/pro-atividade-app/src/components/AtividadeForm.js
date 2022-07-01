@@ -47,8 +47,7 @@ export default function AtividadeForm(props) {
   }
 
   return (
-    <>
-      <h1>Atividade {atividade.id !== 0 ? atividade.id : ''} </h1>
+    <>      
       <form className="row g-3" onSubmit={handleSubmit}>
         <div className="col-md-6">
           <label className="form-label">Título</label>
@@ -59,10 +58,10 @@ export default function AtividadeForm(props) {
           <label className="form-label">Prioridade</label>
           <select name='prioridade' value={atividade.prioridade} onChange={inputTextHandler}
             id="prioridade" className="form-select">
-            <option defaultValue='0'>Selecione...</option>
-            <option value='1'>Baixa</option>
-            <option value='2'>Normal</option>
-            <option value='3'>Alta</option>
+            <option value='NaoDefinido'>Selecione...</option>
+            <option value='Baixa'>Baixa</option>
+            <option value='Normal'>Normal</option>
+            <option value='Alta'>Alta</option>
           </select>
         </div>
         <div className="col-md-6">
@@ -74,12 +73,12 @@ export default function AtividadeForm(props) {
           {
             atividade.id === 0 ? (
               <button className="btn btn-outline-success" type='submit'>
-                <i className='fa fa-plus me-2'></i> Atividade
+                <i className='fa fa-plus me-2'></i> Salvar
               </button>
             ) : (
               <>
                 <button className="btn btn-outline-success me-2" type='submit'>
-                  <i className='fa fa-plus me-2'></i>
+                  <i className='fa fa-success me-2'></i>
                   Salvar
                 </button>
                 <button className="btn btn-outline-warning me-2" onClick={handleCancelar}>

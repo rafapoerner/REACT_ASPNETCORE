@@ -64,7 +64,7 @@ export default function AtividadeForm(props) {
             <option value='Alta'>Alta</option>
           </select>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-12">
           <label className="form-label">Descrição</label>
           <textarea name='descricao' value={atividade.descricao} onChange={inputTextHandler}
             id="descricao" type="text" className="form-control" />

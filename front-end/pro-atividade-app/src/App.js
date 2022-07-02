@@ -96,7 +96,7 @@ function App() {
         handleConfirmModal={handleConfirmModal}
       />
 
-      <Modal show={showAtividadeModal} onHide={handleAtividadeModal}>
+      <Modal size="lg" animation="true" show={showAtividadeModal} onHide={handleAtividadeModal}>
         <Modal.Header closeButton>
           <Modal.Title>
             Atividade {atividade.id !== 0 ? atividade.id : ''}
@@ -113,11 +113,12 @@ function App() {
         </Modal.Body>
       </Modal>
 
-      <Modal size="sm" show={smShowConfirmModal} onHide={handleConfirmModal}>
+      <Modal size="" show={smShowConfirmModal} onHide={handleConfirmModal}>
         <Modal.Header closeButton>
           <Modal.Title>
-            Excluindo Atividade{' '}
-            Atividade {atividade.id !== 0 ? atividade.id : ''}
+            <h4>
+            Excluindo Atividade {atividade.id !== 0 ? atividade.id : ''}
+            </h4>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>

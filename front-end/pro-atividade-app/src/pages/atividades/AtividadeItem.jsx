@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Atividade(props) {
+export default function AtividadeItem(props) {
   function prioridadeLabel(param) {
     switch (param) {
       case "Baixa":
@@ -25,11 +25,7 @@ export default function Atividade(props) {
     }
   }
   return (
-    <div
-      className={
-        "card mb-2 shadow border-" + prioridadeStyle(props.ativ.prioridade)
-      }
-    >
+    <div className={"card mb-2 shadow border-" + prioridadeStyle(props.ativ.prioridade)}>
       <div className="card-body">
         <div className="d-flex justify-content-between">
           <h5 className="card-title">
@@ -38,14 +34,8 @@ export default function Atividade(props) {
           </h5>
           <h6>
             Prioridade:
-            <span
-              className={"ms-1 text- " + prioridadeStyle(props.ativ.prioridade)}
-            >
-              <i
-                className={
-                  "me-1 far fa-" + prioridadeStyle(props.ativ.prioridade, true)
-                }
-              ></i>
+            <span className={"ms-1 text- " + prioridadeStyle(props.ativ.prioridade)}>
+              <i className={"me-1 far fa-" + prioridadeStyle(props.ativ.prioridade, true)}></i>
               {prioridadeLabel(props.ativ.prioridade)}
             </span>
           </h6>

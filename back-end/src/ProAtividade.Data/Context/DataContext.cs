@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using ProAtividade.Data.Mappings;
 using ProAtividade.Domain.Entities;
